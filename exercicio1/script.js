@@ -1,9 +1,16 @@
-let verificar = prompt ('Você deseja comer mais coxinhas? se sim, digite S! se não, digite N').toUpperCase
+let desejaMais = prompt('Deseja comer mais coxinha ?\nDigite S para sim \nDigite N para não').toUpperCase()
+
+if(desejaMais === "S" || "N"){
+    console.log("respondeu corretamente")
+}else{
+    alert("resposta invalida")
+}
+
 let conta = 2.50
 
-while(verificar !== 'S'){
-    alert('Não quer mais coxinhas')
-    verificar = prompt('Você deseja comer mais coxinhas? se sim, digite S! se não, digite N').toUpperCase
-    
-    alert('quer mais uma coxinha')
+while(desejaMais === "S"){ 
+    conta = conta+2.50
+    desejaMais = prompt('Deseja comer mais coxinha ?\n Digite S para siim \nDigite N para não').toUpperCase()
+
 }
+alert(conta)
